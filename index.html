@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Decommissioning Radar | Evidence-Based Intelligence</title>
+    <meta name="description" content="Evidence-based dashboard identifying high-priority industrial decommissioning opportunities across Europe. All assets backed by public data sources.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Charts via CDN -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- SIMULATION OVERLAY -->
+        <div id="simulation-overlay" class="overlay active">
+            <div class="scanner-container">
+                <div class="gemini-logo">✧</div>
+                <h1 class="scanning-title">Initializing Decommissioning Intelligence Engine...</h1>
+                <div class="terminal-box" id="terminal">
+                    <!-- Logs will be injected here -->
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN DASHBOARD -->
+        <main class="dashboard hidden" id="dashboard">
+            <nav class="sidebar">
+                <div class="sidebar-brand">
+                    <h2 class="evalueserve-text-logo">EVALUESERVE</h2>
+                    <p class="sidebar-subtitle">Europe <br><span class="accent">Decommissioning Radar</span></p>
+                </div>
+                <ul class="nav-links" id="sidebar-nav">
+                    <li class="active"><button id="nav-assets" class="nav-btn">Target Assets</button></li>
+                    <li><button id="nav-news" class="nav-btn">Media Monitoring</button></li>
+                    <li><button id="nav-tenders" class="nav-btn">Tenders</button></li>
+                    <li style="margin-top:2rem;"><button id="nav-export" class="nav-btn">Export Report</button></li>
+                </ul>
+            </nav>
+
+            <section class="main-content">
+                <header class="topbar">
+                    <div>
+                        <h1>European Decommissioning Radar</h1>
+                        <p class="subtitle">Up to 2035 Projection | Evidence-Based Asset Intelligence</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn primary-btn" id="refresh-scan-btn">Initiate New Scan</button>
+                    </div>
+                </header>
+
+                <!-- Dashboard Core Views -->
+                <div id="dashboard-core-views">
+                    <!-- KPIs -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card glass">
+                            <h3>Assets Identified for Decommissioning Need</h3>
+                            <div class="kpi-value" id="kpi-total-assets">--</div>
+                            <button class="info-btn" data-tooltip="Total number of European industrial assets identified through evidence-based analysis as requiring decommissioning, where no contract has been awarded yet.">ⓘ</button>
+                        </div>
+                        <div class="kpi-card glass">
+                            <h3>Est. Remediation Value of All Assets Identified</h3>
+                            <div class="kpi-value" id="kpi-total-value">--</div>
+                            <button class="info-btn" data-tooltip="Aggregate estimated remediation and decommissioning cost for all identified assets. Values are estimates based on public filings, annual reports, and industry benchmarks. Click 'Analyze' on any asset for detailed methodology.">ⓘ</button>
+                        </div>
+                        <div class="kpi-card glass">
+                            <h3>Top Sector <span class="kpi-sub">(Based on Total Opportunities Identified)</span></h3>
+                            <div class="kpi-value" id="kpi-top-sector">--</div>
+                            <button class="info-btn" data-tooltip="The industrial sector with the highest number of decommissioning opportunities identified in the current filtered view. Sectors include Oil & Gas, Refinery & Petrochemical, Chemical, Wind, Power, Bioenergy, Shipping & Marine, and Other Industrial.">ⓘ</button>
+                        </div>
+                        <div class="kpi-card glass">
+                            <h3 id="kpi-critical-label">Opportunities in Next 2 Years</h3>
+                            <div class="kpi-value warning" id="kpi-critical">--</div>
+                            <button class="info-btn" data-tooltip="Number of assets with expected decommissioning timelines within the next 2 calendar years from the current date. These represent the most time-sensitive opportunities.">ⓘ</button>
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div class="charts-grid" id="section-sectors">
+                        <div class="chart-card glass">
+                            <div class="chart-title-row">
+                                <h3>Available Opportunities by Year</h3>
+                                <button class="info-btn" data-tooltip="Distribution of identified decommissioning opportunities across projected target years. The year reflects when decommissioning activity is expected to commence, based on operator announcements, regulatory deadlines, and asset end-of-life timelines.">ⓘ</button>
+                            </div>
+                            <div class="chart-canvas-wrap">
+                                <canvas id="timelineChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card glass">
+                            <div class="chart-title-row">
+                                <h3>Total Opportunities Identified by Sector</h3>
+                                <button class="info-btn" data-tooltip="Breakdown of identified decommissioning opportunities by industrial sector. Sectors are categorized based on the primary business activity of each asset. Nuclear assets are excluded from this analysis.">ⓘ</button>
+                            </div>
+                            <div class="chart-canvas-wrap">
+                                <canvas id="sectorChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card glass span-2">
+                            <div class="chart-title-row">
+                                <h3>Identified Opportunities by Country</h3>
+                                <button class="info-btn" data-tooltip="Geographic distribution of decommissioning opportunities across European countries. Each bar represents the number of assets identified in that country requiring decommissioning where no tender has been awarded.">ⓘ</button>
+                            </div>
+                            <div class="chart-canvas-wrap chart-canvas-wrap-tall">
+                                <canvas id="countryChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Table -->
+                    <div class="table-section glass" id="section-assets">
+                        <div class="table-header">
+                            <div class="table-title-row">
+                                <h3>🎯 Decommissioning Opportunity Pipeline</h3>
+                                <button class="info-btn" data-tooltip="Comprehensive list of European industrial assets identified for decommissioning based on evidence-based analysis. Each asset is scored using a 5-factor Readiness Score model. Hover over any asset name for a quick overview, or click 'Analyze' for full intelligence brief with sources. Assets are sorted by Readiness Score (highest first). All values are labelled estimates.">ⓘ</button>
+                            </div>
+                            <div class="filters" id="asset-filters">
+                                <select id="filter-year" class="filter-dropdown">
+                                    <option value="all">All Years</option>
+                                </select>
+                                <select id="filter-country" class="filter-dropdown">
+                                    <option value="all">All Countries</option>
+                                </select>
+                                <select id="filter-sector" class="filter-dropdown">
+                                    <option value="all">All Sectors</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-scroll-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Asset Name</th>
+                                        <th>Sector</th>
+                                        <th>Country</th>
+                                        <th>Timeline</th>
+                                        <th>Est. Value (€M)</th>
+                                        <th>Readiness</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="asset-table-body">
+                                    <!-- Rows injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- READINESS SCORE LEGEND -->
+                        <div class="readiness-legend">
+                            <h4>📋 Readiness Score Legend</h4>
+                            <div class="legend-items">
+                                <div class="legend-item">
+                                    <span class="readiness-dot score-imminent"></span>
+                                    <strong>Imminent (4.0–5.0)</strong>
+                                    <span class="legend-desc">— Strong signals, no contract awarded, high urgency</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="readiness-dot score-likely"></span>
+                                    <strong>Likely (3.0–3.9)</strong>
+                                    <span class="legend-desc">— Multiple signals, tender expected soon</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="readiness-dot score-developing"></span>
+                                    <strong>Developing (2.0–2.9)</strong>
+                                    <span class="legend-desc">— Early signals, monitoring recommended</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="readiness-dot score-watch"></span>
+                                    <strong>Watch (0.0–1.9)</strong>
+                                    <span class="legend-desc">— Weak signals, long horizon</span>
+                                </div>
+                            </div>
+                            <p class="legend-formula">
+                                <strong>Score Formula:</strong> End-of-Life (20%) + Regulatory Pressure (20%) + Operator Intent (25%) + Environmental Risk (15%) + Tender Openness (20%)
+                            </p>
+                            <p class="legend-note">
+                                <em>💡 Hover over any asset name for quick rationale. Click "Analyze" for full intelligence brief with sources.</em>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- End core views -->
+
+                <!-- Media Monitoring View (Hidden by default) -->
+                <div id="section-news" class="hidden">
+                    <div class="news-header" style="margin-bottom: 1rem;">
+                        <h2>Media Monitoring & Policy Radar</h2>
+                        <div class="news-filters">
+                            <label for="news-date-start">From:</label>
+                            <input type="date" id="news-date-start" class="filter-input-date">
+                            <label for="news-date-end">To:</label>
+                            <input type="date" id="news-date-end" class="filter-input-date">
+                            <button id="btn-filter-news" class="btn primary-btn" style="padding: 0.5rem 1rem;">Filter Dates</button>
+                        </div>
+                    </div>
+                    <div class="map-container glass">
+                        <div id="news-map" style="width: 100%; height: 350px;"></div>
+                    </div>
+                    <div class="news-grid" id="news-feed"></div>
+                </div>
+
+                <!-- Tenders View (Hidden by default) -->
+                <div id="section-tenders" class="hidden">
+                    <div class="news-header" style="margin-bottom: 1rem;">
+                        <h2>Decommissioning & Demolition Tenders</h2>
+                        <div class="news-filters">
+                            <label for="tenders-date-start">From:</label>
+                            <input type="date" id="tenders-date-start" class="filter-input-date">
+                            <label for="tenders-date-end">To:</label>
+                            <input type="date" id="tenders-date-end" class="filter-input-date">
+                            <button id="btn-filter-tenders" class="btn primary-btn" style="padding: 0.5rem 1rem;">Filter Dates</button>
+                        </div>
+                    </div>
+                    <div class="map-container glass">
+                        <div id="tenders-map" style="width: 100%; height: 350px;"></div>
+                    </div>
+                    <div class="news-grid" id="tenders-feed"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ANALYSIS MODAL -->
+        <div id="analysis-modal" class="modal-overlay hidden">
+            <div class="modal-content glass">
+                <div class="modal-header">
+                    <h2 id="modal-asset-name">Asset Name</h2>
+                    <button id="modal-close-btn" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="mbb-analysis">
+                        <div id="modal-analysis-text" class="analysis-text"></div>
+                    </div>
+                    <div class="modal-contact">
+                        <p>To request detailed analysis or engage our advisory team, contact <a href="mailto:pritam.singh@evalueserve.com" class="contact-link">pritam.singh@evalueserve.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFO TOOLTIP POPUP (global, positioned by JS) -->
+        <div id="info-tooltip" class="info-tooltip-box hidden"></div>
+    </div>
+
+    <script src="mockData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
