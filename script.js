@@ -614,14 +614,27 @@ document.addEventListener('DOMContentLoaded', () => {
             'Ireland': 'Ireland'
         };
 
+        const EU_COUNTRIES = [
+            'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 
+            'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 
+            'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal', 
+            'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden'
+        ];
+
         const counts = {};
         data.forEach(d => {
             if (d.country) {
-                const mapped = COUNTRY_MAP[d.country] || d.country;
-                counts[mapped] = (counts[mapped] || 0) + 1;
+                if (d.country === 'European Union') {
+                    EU_COUNTRIES.forEach(c => {
+                        counts[c] = (counts[c] || 0) + 1;
+                    });
+                } else {
+                    const mapped = COUNTRY_MAP[d.country] || d.country;
+                    counts[mapped] = (counts[mapped] || 0) + 1;
+                }
             }
         });
-        const arrData = [['Country', 'Items']];
+        const arrData = [['Country', 'Frequency']];
         Object.entries(counts).forEach(([c, v]) => arrData.push([c, v]));
         const dt = google.visualization.arrayToDataTable(arrData);
         const options = {
