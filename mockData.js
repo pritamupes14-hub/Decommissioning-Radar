@@ -1519,66 +1519,56 @@ const scanLogs = [
 const mockNews = [
     {
         id: 1,
-        title: "Italy delays coal phase out by over a decade",
-        source: "NBC",
-        link: "https://www.nbcrightnow.com/national/italy-delays-coal-phase-out-by-over-a-decade/article_d0d98728-1d93-5881-a988-3700b9dbf012.html",
-        date: "2026-04-01",
-        category: "Regulatory Update",
-        sector: "Power",
-        country: "Italy"
-    },
-    {
-        id: 2,
-        title: "Germany’s industry makes unexpectedly weak start to 2026",
-        source: "Reuters",
-        link: "https://money.usnews.com/investing/news/articles/2026-03-09/german-industrial-orders-fall-more-than-expected-in-january",
-        date: "2026-03-09",
-        category: "Market Intelligence",
-        sector: "Other Industrial",
+        title: "Finalrave for First German Offshore Wind Farm as Vattenfall Starts Preparing Decommissioning Tender",
+        source: "Offshore Wind",
+        link: "https://www.offshorewind.biz/2025/10/10/finalrave-for-first-german-offshore-wind-farm-as-vattenfall-starts-preparing-decommissioning-tender/",
+        date: "2025-10-10",
+        category: "Demolition Scope",
+        sector: "Wind",
         country: "Germany"
     },
     {
+        id: 2,
+        title: "Acteon & Wynnergy Team Up to Deliver Offshore Wind Solutions Across Asia",
+        source: "Offshore Wind",
+        link: "https://www.offshorewind.biz/2025/10/29/acteon-wynnergy-team-up-to-deliver-offshore-wind-solutions-across-asia/",
+        date: "2025-10-29",
+        category: "Market Intelligence",
+        sector: "Wind",
+        country: "Global"
+    },
+    {
         id: 3,
-        title: "EU Commission adopts EU Ports Strategy and Industrial Maritime Strategy",
-        source: "European Commission (DG MOVE)",
-        link: "https://transport.ec.europa.eu/transport-modes/maritime/eu-ports-and-industrial-maritime-strategies_en",
-        date: "2026-03-04",
-        category: "Strategy",
-        sector: "Shipping & Marine",
-        country: "European Union"
+        title: "Decommissioning Journey Commences for Germany’s First Offshore Wind Farm",
+        source: "Offshore Wind",
+        link: "https://www.offshorewind.biz/2025/11/19/decommissioning-journey-commences-for-germanys-first-offshore-wind-farm/",
+        date: "2025-11-19",
+        category: "Closure Announcement",
+        sector: "Wind",
+        country: "Germany"
     },
     {
         id: 4,
-        title: "ArcelorMittal invests €1.3bn in electric arc furnace at Dunkirk",
-        source: "Euronews",
-        link: "https://www.euronews.com/my-europe/2026/02/11/arcelormittal-invests-13-billion-to-produce-green-steel-at-its-dunkirk-plant",
-        date: "2026-02-11",
-        category: "Asset Transition",
-        sector: "Other Industrial",
-        country: "France"
+        title: "Port of Rotterdam Authority Launches RFI for New Offshore Wind Terminal at Maasvlakte",
+        source: "Offshore Wind",
+        link: "https://www.offshorewind.biz/2025/11/26/port-of-rotterdam-authority-launches-rfi-for-new-offshore-wind-terminal-at-maasvlakte/",
+        date: "2025-11-26",
+        category: "Regulatory Update",
+        sector: "Wind",
+        country: "Netherlands"
     },
     {
         id: 5,
-        title: "Europe's chemical industry moves into crisis mode",
-        source: "ICIS",
-        link: "https://www.icis.com/chemicals-and-the-economy/2026/02/europes-chemical-industry-moves-into-crisis-mode/",
-        date: "2026-02-01",
-        category: "Market Intelligence",
-        sector: "Chemical",
-        country: "European Union"
+        title: "ExxonMobil to close Scotland ethylene plant in 2026 as Europe exit deepens",
+        source: "Bloomin Global Media",
+        link: "https://www.bloominglobal.com/media/detail/exxonmobil-to-close-scotland-ethylene-plant-in-2026-as-europe-exit-deepens",
+        date: "2026-01-06",
+        category: "Closure Announcement",
+        sector: "Refinery & Petrochemical",
+        country: "UK"
     },
     {
         id: 6,
-        title: "ArcelorMittal files €1.8bn claim against Italy over troubled steel plants",
-        source: "Reuters",
-        link: "https://money.usnews.com/investing/news/articles/2026-01-29/arcelormittal-makes-2-billion-claim-against-italy-in-steel-plant-row",
-        date: "2026-01-29",
-        category: "Legal News",
-        sector: "Other Industrial",
-        country: "Italy"
-    },
-    {
-        id: 7,
         title: "Chemical plant closures surge six fold in Europe since 2022, new report finds",
         source: "Cefic",
         link: "https://cefic.org/news/chemical-plant-closures-surge-six-fold-in-europe-since-2022-reaching-37mt-new-report-finds/",
@@ -1588,7 +1578,7 @@ const mockNews = [
         country: "European Union"
     },
     {
-        id: 8,
+        id: 7,
         title: "Chemical plant closures surge in Europe as investment collapses",
         source: "Society of Chemical Industry (SCI)",
         link: "https://www.soci.org/news/2026/1/chemical-plant-closures-surge-in-europe-investment-drops",
@@ -1598,14 +1588,94 @@ const mockNews = [
         country: "European Union"
     },
     {
+        id: 8,
+        title: "ArcelorMittal files €1.8bn claim against Italy over troubled steel plants",
+        source: "Reuters",
+        link: "https://money.usnews.com/investing/news/articles/2026-01-29/arcelormittal-makes-2-billion-claim-against-italy-in-steel-plant-row",
+        date: "2026-01-29",
+        category: "Legal News",
+        sector: "Other Industrial",
+        country: "Italy"
+    },
+    {
         id: 9,
-        title: "ExxonMobil to close Scotland ethylene plant in 2026 as Europe exit deepens",
-        source: "Bloomin Global Media",
-        link: "https://www.bloominglobal.com/media/detail/exxonmobil-to-close-scotland-ethylene-plant-in-2026-as-europe-exit-deepens",
-        date: "2026-01-06",
+        title: "Europe's chemical industry moves into crisis mode",
+        source: "ICIS",
+        link: "https://www.icis.com/chemicals-and-the-economy/2026/02/europes-chemical-industry-moves-into-crisis-mode/",
+        date: "2026-02-01",
+        category: "Market Intelligence",
+        sector: "Chemical",
+        country: "European Union"
+    },
+    {
+        id: 10,
+        title: "ArcelorMittal invests €1.3bn in electric arc furnace at Dunkirk",
+        source: "Euronews",
+        link: "https://www.euronews.com/my-europe/2026/02/11/arcelormittal-invests-13-billion-to-produce-green-steel-at-its-dunkirk-plant",
+        date: "2026-02-11",
+        category: "Asset Transition",
+        sector: "Other Industrial",
+        country: "France"
+    },
+    {
+        id: 11,
+        title: "AF Gruppen acquires offshore decommissioning company Claxton Engineering Services",
+        source: "Riviera Maritime Media",
+        link: "https://www.rivieramm.com/news-content-hub/af-gruppen-acquires-offshore-decommissioning-company-claxton-engineering-services-88470",
+        date: "2026-02-20",
+        category: "Market Intelligence",
+        sector: "Shipping & Marine",
+        country: "Norway"
+    },
+    {
+        id: 12,
+        title: "EU Commission adopts EU Ports Strategy and Industrial Maritime Strategy",
+        source: "European Commission (DG MOVE)",
+        link: "https://transport.ec.europa.eu/transport-modes/maritime/eu-ports-and-industrial-maritime-strategies_en",
+        date: "2026-03-04",
+        category: "Strategy",
+        sector: "Shipping & Marine",
+        country: "European Union"
+    },
+    {
+        id: 13,
+        title: "Germany’s industry makes unexpectedly weak start to 2026",
+        source: "Reuters",
+        link: "https://money.usnews.com/investing/news/articles/2026-03-09/german-industrial-orders-fall-more-than-expected-in-january",
+        date: "2026-03-09",
+        category: "Market Intelligence",
+        sector: "Other Industrial",
+        country: "Germany"
+    },
+    {
+        id: 14,
+        title: "Study: Almost a third of Europe's wind capacity to face end-of-life decisions this decade",
+        source: "BusinessGreen",
+        link: "https://www.businessgreen.com/news/4528167/study-europes-wind-capacity-end-life-decisions-decade",
+        date: "2026-03-15",
+        category: "Industry Report",
+        sector: "Wind",
+        country: "European Union"
+    },
+    {
+        id: 15,
+        title: "Global Maritime to Decommission TetraSpar Floater Offshore Norway",
+        source: "Offshore Wind",
+        link: "https://www.offshorewind.biz/2026/03/27/global-maritime-to-decommission-tetraspar-floater-offshore-norway/",
+        date: "2026-03-27",
         category: "Closure Announcement",
-        sector: "Refinery & Petrochemical",
-        country: "UK"
+        sector: "Wind",
+        country: "Norway"
+    },
+    {
+        id: 16,
+        title: "Italy delays coal phase out by over a decade",
+        source: "NBC",
+        link: "https://www.nbcrightnow.com/national/italy-delays-coal-phase-out-by-over-a-decade/article_d0d98728-1d93-5881-a988-3700b9dbf012.html",
+        date: "2026-04-01",
+        category: "Regulatory Update",
+        sector: "Power",
+        country: "Italy"
     }
 ];
 
