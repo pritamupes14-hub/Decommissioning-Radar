@@ -511,11 +511,11 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (view === 'news') {
             sectionNews.classList.remove('hidden');
             renderFeed(mockNews, 'news-feed');
-            if (googleChartsLoaded) drawMap(mockNews, 'news-map', '#993584');
+            drawMapSafe(mockNews, 'news-map', '#993584');
         } else if (view === 'tenders') {
             sectionTenders.classList.remove('hidden');
             renderFeed(mockTenders, 'tenders-feed');
-            if (googleChartsLoaded) drawMap(mockTenders, 'tenders-map', '#3265aa');
+            drawMapSafe(mockTenders, 'tenders-map', '#3265aa');
         }
     }
 
@@ -558,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (start) filtered = filtered.filter(n => new Date(n.date) >= new Date(start));
             if (end) filtered = filtered.filter(n => new Date(n.date) <= new Date(end));
             renderFeed(filtered, renderTarget);
-            if (googleChartsLoaded) drawMap(filtered, mapId, mapColor);
+            drawMapSafe(filtered, mapId, mapColor);
         });
     }
 
@@ -569,9 +569,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8. GOOGLE GEOCHARTS
     // ===================================================
     let googleChartsLoaded = false;
+    let pendingMapCalls = []; // queue map draws until Google Charts is ready
+
+    function drawMapSafe(data, containerId, heatColor) {
+        if (googleChartsLoaded) {
+            drawMap(data, containerId, heatColor);
+        } else {
+            pendingMapCalls.push({ data, containerId, heatColor });
+        }
+    }
+
     if (typeof google !== 'undefined') {
         google.charts.load('current', { 'packages': ['geochart'] });
-        google.charts.setOnLoadCallback(() => { googleChartsLoaded = true; });
+        google.charts.setOnLoadCallback(() => {
+            googleChartsLoaded = true;
+            // Flush any queued map draws
+            pendingMapCalls.forEach(call => drawMap(call.data, call.containerId, call.heatColor));
+            pendingMapCalls = [];
+        });
     }
 
     function drawMap(data, containerId, heatColor) {
