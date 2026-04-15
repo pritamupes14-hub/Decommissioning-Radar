@@ -1,4 +1,4 @@
-﻿// ===========================================================================
+// ===========================================================================
 // EUROPEAN DECOMMISSIONING RADAR — EVIDENCE-BASED ASSET DATABASE
 // ===========================================================================
 // Asset Selection Criteria:
@@ -209,7 +209,7 @@ const mockData = [
         sector: "Refinery & Petrochemical",
         country: "UK",
         year: 2027,
-        value: 500,
+        value: 60,
         tenderStatus: "Not yet awarded",
         selectionDrivers: [
             "Petroineos ceased crude oil processing on 29 April 2025 — refinery permanently shut",
