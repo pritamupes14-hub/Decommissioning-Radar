@@ -1685,96 +1685,6 @@ const mockNews = [
 const mockTenders = [
     {
         id: 1,
-        title: "FEED Study for North Sea Legacy Platform Decommissioning",
-        source: "Equinor Procurement",
-        link: "https://news.google.com/search?q=Equinor+FEED+study+decommissioning+tender+2026",
-        date: "2026-04-10",
-        category: "FEED Study",
-        sector: "Oil & Gas",
-        country: "Norway"
-    },
-    {
-        id: 2,
-        title: "RFP for Environmental Remediation of Taranto Steelworks Site",
-        source: "Italian Ministry of Environment",
-        link: "https://news.google.com/search?q=Taranto+steelworks+remediation+RFP+2026",
-        date: "2026-03-25",
-        category: "Environmental Assessment",
-        sector: "Other Industrial",
-        country: "Italy"
-    },
-    {
-        id: 3,
-        title: "ITB for Dismantling and Site Clearance of Fife Ethylene Plant Units",
-        source: "ExxonMobil UK",
-        link: "https://news.google.com/search?q=ExxonMobil+Fife+decommissioning+tender+2026",
-        date: "2026-03-12",
-        category: "Demolition Scope",
-        sector: "Refinery & Petrochemical",
-        country: "UK"
-    },
-    {
-        id: 4,
-        title: "Tender for Hazardous Waste Management — Belgium Industrial Sites",
-        source: "OVAM",
-        link: "https://news.google.com/search?q=Belgium+hazardous+waste+management+tender+2026",
-        date: "2026-03-05",
-        category: "Waste Management",
-        sector: "Chemical",
-        country: "Belgium"
-    },
-    {
-        id: 5,
-        title: "Pre-qualification for EAF Infrastructure Construction @ Dunkirk",
-        source: "ArcelorMittal Europe",
-        link: "https://news.google.com/search?q=ArcelorMittal+Dunkirk+EAF+construction+tender",
-        date: "2026-02-28",
-        category: "EPC Appointment",
-        sector: "Other Industrial",
-        country: "France"
-    },
-    {
-        id: 6,
-        title: "Demolition Scope Definition for Older Units @ Corinth Refinery",
-        source: "Motor Oil Hellas",
-        link: "https://news.google.com/search?q=Corinth+refinery+demolition+tender+2026",
-        date: "2026-02-15",
-        category: "Demolition Scope",
-        sector: "Refinery & Petrochemical",
-        country: "Greece"
-    },
-    {
-        id: 7,
-        title: "RFI for Marine Scour Protection Removal — North Sea Wind Sites",
-        source: "Vattenfall",
-        link: "https://news.google.com/search?q=Vattenfall+scour+protection+removal+RFI+2026",
-        date: "2026-02-05",
-        category: "Demolition Scope",
-        sector: "Wind",
-        country: "Germany"
-    },
-    {
-        id: 8,
-        title: "Environmental Impact Assessment for Shell's Brent Field Decommissioning 2026",
-        source: "Shell Procurement",
-        link: "https://news.google.com/search?q=Shell+Brent+EIA+tender+2026",
-        date: "2026-01-28",
-        category: "Environmental Assessment",
-        sector: "Oil & Gas",
-        country: "UK"
-    },
-    {
-        id: 9,
-        title: "Demolition and Remediation RFP — Ludwigshafen Non-Core Units",
-        source: "BASF",
-        link: "https://news.google.com/search?q=BASF+Ludwigshafen+demolition+RFP+2026",
-        date: "2026-01-18",
-        category: "Demolition Scope",
-        sector: "Chemical",
-        country: "Germany"
-    },
-    {
-        id: 10,
         title: "EPC Tender for Carbon Capture Integration at Legacy Industrial Hubs",
         source: "European Commission (Innovation Fund)",
         link: "https://news.google.com/search?q=EU+Innovation+Fund+EPC+tender+2026",
@@ -1784,57 +1694,67 @@ const mockTenders = [
         country: "European Union"
     },
     {
-        id: 11,
-        title: "Marine Engineering FEED for Yttre Stengrund Wind Turbine Removals",
-        source: "Vattenfall Procurement",
-        link: "https://news.google.com/search?q=Yttre+Stengrund+turbine+removal+FEED+tender+2026",
-        date: "2026-03-22",
-        category: "FEED Study",
-        sector: "Wind",
-        country: "Sweden"
-    },
-    {
-        id: 12,
-        title: "Environmental Compliance Audit for Rotterdam Harbor Site Clearance",
-        source: "Port of Rotterdam",
-        link: "https://news.google.com/search?q=Rotterdam+site+clearance+compliance+tender+2026",
-        date: "2026-03-10",
-        category: "Environmental Assessment",
-        sector: "Other Industrial",
-        country: "Netherlands"
-    },
-    {
-        id: 13,
-        title: "RFP for Structural Disposal of Aging Tank Farms in Marseille",
-        source: "GPMM",
-        link: "https://news.google.com/search?q=Marseille+tank+farm+disposal+tender+2026",
-        date: "2026-02-28",
-        category: "Demolition Scope",
-        sector: "Refinery & Petrochemical",
-        country: "France"
-    },
-    {
-        id: 14,
-        title: "Pre-tender RFI for Subsea Well Plugging and Abandonment — North Sea 2026-27",
-        source: "Centrica Energy",
-        link: "https://news.google.com/search?q=Centrica+well+plugging+abandonment+tender+2026",
-        date: "2026-03-05",
+        id: 2,
+        title: "Subsea infrastructure removal tender across UK North Sea assets",
+        source: "TAQA UK",
+        link: "https://ocean-energyresources.com/2026/01/11/taqa-to-tender-uk-decommissioning-contract/",
+        date: "2026-01-11",
         category: "Demolition Scope",
         sector: "Oil & Gas",
         country: "UK"
     },
     {
-        id: 15,
-        title: "Tender for Soil Decontamination and Land Preparation — Gdynia Docklands",
-        source: "Polish Port Authority",
-        link: "https://news.google.com/search?q=Gdynia+dockland+remediation+tender+2026",
-        date: "2026-03-15",
-        category: "Environmental Assessment",
-        sector: "Shipping & Marine",
-        country: "Poland"
+        id: 3,
+        title: "Demolition and Remediation RFP — Ludwigshafen Non-Core Units",
+        source: "BASF",
+        link: "https://news.google.com/search?q=BASF+Ludwigshafen+demolition+RFP+2026",
+        date: "2026-01-18",
+        category: "Demolition Scope",
+        sector: "Chemical",
+        country: "Germany"
     },
     {
-        id: 16,
+        id: 4,
+        title: "Environmental Impact Assessment for Shell's Brent Field Decommissioning 2026",
+        source: "Shell Procurement",
+        link: "https://news.google.com/search?q=Shell+Brent+EIA+tender+2026",
+        date: "2026-01-28",
+        category: "Environmental Assessment",
+        sector: "Oil & Gas",
+        country: "UK"
+    },
+    {
+        id: 5,
+        title: "Call for Expressions of Interest: Shipbreaking Yard Modernization and Remediation",
+        source: "DG MARE / EMSA",
+        link: "https://news.google.com/search?q=EU+shipbreaking+yard+remediation+tender+2026",
+        date: "2026-01-30",
+        category: "Environmental Assessment",
+        sector: "Shipping & Marine",
+        country: "European Union"
+    },
+    {
+        id: 6,
+        title: "RFI for Marine Scour Protection Removal — North Sea Wind Sites",
+        source: "Vattenfall",
+        link: "https://news.google.com/search?q=Vattenfall+scour+protection+removal+RFI+2026",
+        date: "2026-02-05",
+        category: "Demolition Scope",
+        sector: "Wind",
+        country: "Germany"
+    },
+    {
+        id: 7,
+        title: "Demolition Scope Definition for Older Units @ Corinth Refinery",
+        source: "Motor Oil Hellas",
+        link: "https://news.google.com/search?q=Corinth+refinery+demolition+tender+2026",
+        date: "2026-02-15",
+        category: "Demolition Scope",
+        sector: "Refinery & Petrochemical",
+        country: "Greece"
+    },
+    {
+        id: 8,
         title: "FEED for Hydrometallurgical Recycling Facility at Retired Chemical Site",
         source: "Umicore / EU Circular Fund",
         link: "https://news.google.com/search?q=Umicore+recycling+facility+FEED+tender+2026",
@@ -1844,27 +1764,7 @@ const mockTenders = [
         country: "European Union"
     },
     {
-        id: 17,
-        title: "EPC for Thermal Remediation Units at Former Petrochemical Platform",
-        source: "Eni S.p.A.",
-        link: "https://news.google.com/search?q=Eni+thermal+remediation+EPC+tender+2026",
-        date: "2026-03-20",
-        category: "EPC Appointment",
-        sector: "Refinery & Petrochemical",
-        country: "Italy"
-    },
-    {
-        id: 18,
-        title: "Audit of North Sea Pipelines for Future Decommissioning Liability",
-        source: "NSTA Energy Pathfinder",
-        link: "https://news.google.com/search?q=NSTA+pipeline+decommissioning+audit+tender+2026",
-        date: "2026-04-01",
-        category: "Environmental Assessment",
-        sector: "Oil & Gas",
-        country: "UK"
-    },
-    {
-        id: 19,
+        id: 9,
         title: "RFP for Dismantling of Legacy Conveyor Systems at Ruhr Coal Hub",
         source: "RAG AG",
         link: "https://news.google.com/search?q=Ruhr+coal+hub+conveyor+dismantling+tender+2026",
@@ -1874,13 +1774,184 @@ const mockTenders = [
         country: "Germany"
     },
     {
+        id: 10,
+        title: "Demolition and earth moving works for industrial site redevelopment in Elsterwerda",
+        source: "Landkreis Elbe Elster (TED)",
+        link: "https://ted.europa.eu/en/notice/-/detail/124818-2026",
+        date: "2026-02-23",
+        category: "Demolition Scope",
+        sector: "Other Industrial",
+        country: "Germany"
+    },
+    {
+        id: 11,
+        title: "Pre-qualification for EAF Infrastructure Construction @ Dunkirk",
+        source: "ArcelorMittal Europe",
+        link: "https://news.google.com/search?q=ArcelorMittal+Dunkirk+EAF+construction+tender",
+        date: "2026-02-28",
+        category: "EPC Appointment",
+        sector: "Other Industrial",
+        country: "France"
+    },
+    {
+        id: 12,
+        title: "RFP for Structural Disposal of Aging Tank Farms in Marseille",
+        source: "GPMM",
+        link: "https://news.google.com/search?q=Marseille+tank+farm+disposal+tender+2026",
+        date: "2026-02-28",
+        category: "Demolition Scope",
+        sector: "Refinery & Petrochemical",
+        country: "France"
+    },
+    {
+        id: 13,
+        title: "Demolition of derelict industrial building at 6 Derry Road, Strabane",
+        source: "Derry City & Strabane District Council",
+        link: "https://etendersni.gov.uk/epps/cft/downloadNotice.do?documentId=6435210",
+        date: "2026-03-02",
+        category: "Demolition Scope",
+        sector: "Other Industrial",
+        country: "UK"
+    },
+    {
+        id: 14,
+        title: "Brent Field decommissioning – steel structure removal package (re tender)",
+        source: "Shell UK (Energy Pathfinder)",
+        link: "https://energypathfinder.nstauthority.co.uk/upcoming-tenders/6320",
+        date: "2026-03-02",
+        category: "Demolition Scope",
+        sector: "Oil & Gas",
+        country: "UK"
+    },
+    {
+        id: 15,
+        title: "Tender for Hazardous Waste Management — Belgium Industrial Sites",
+        source: "OVAM",
+        link: "https://news.google.com/search?q=Belgium+hazardous+waste+management+tender+2026",
+        date: "2026-03-05",
+        category: "Waste Management",
+        sector: "Chemical",
+        country: "Belgium"
+    },
+    {
+        id: 16,
+        title: "Pre-tender RFI for Subsea Well Plugging and Abandonment — North Sea 2026-27",
+        source: "Centrica Energy",
+        link: "https://news.google.com/search?q=Centrica+well+plugging+abandonment+tender+2026",
+        date: "2026-03-05",
+        category: "Demolition Scope",
+        sector: "Oil & Gas",
+        country: "UK"
+    },
+    {
+        id: 17,
+        title: "Environmental Compliance Audit for Rotterdam Harbor Site Clearance",
+        source: "Port of Rotterdam",
+        link: "https://news.google.com/search?q=Rotterdam+site+clearance+compliance+tender+2026",
+        date: "2026-03-10",
+        category: "Environmental Assessment",
+        sector: "Other Industrial",
+        country: "Netherlands"
+    },
+    {
+        id: 18,
+        title: "ITB for Dismantling and Site Clearance of Fife Ethylene Plant Units",
+        source: "ExxonMobil UK",
+        link: "https://news.google.com/search?q=ExxonMobil+Fife+decommissioning+tender+2026",
+        date: "2026-03-12",
+        category: "Demolition Scope",
+        sector: "Refinery & Petrochemical",
+        country: "UK"
+    },
+    {
+        id: 19,
+        title: "Landfill gas flare replacement incl. decommissioning of legacy units",
+        source: "Cork County Council (TED)",
+        link: "https://ted.europa.eu/en/notice/177795-2026/html",
+        date: "2026-03-13",
+        category: "Demolition Scope",
+        sector: "Bioenergy",
+        country: "Ireland"
+    },
+    {
         id: 20,
-        title: "Call for Expressions of Interest: Shipbreaking Yard Modernization and Remediation",
-        source: "DG MARE / EMSA",
-        link: "https://news.google.com/search?q=EU+shipbreaking+yard+remediation+tender+2026",
-        date: "2026-01-30",
+        title: "Demolition, asbestos removal & strip out of multi building industrial complex in Orly",
+        source: "RATP Habitat (TED)",
+        link: "https://ted.europa.eu/en/notice/174979-2026/pdf",
+        date: "2026-03-13",
+        category: "Demolition Scope",
+        sector: "Other Industrial",
+        country: "France"
+    },
+    {
+        id: 21,
+        title: "Tender for Soil Decontamination and Land Preparation — Gdynia Docklands",
+        source: "Polish Port Authority",
+        link: "https://news.google.com/search?q=Gdynia+dockland+remediation+tender+2026",
+        date: "2026-03-15",
         category: "Environmental Assessment",
         sector: "Shipping & Marine",
-        country: "European Union"
+        country: "Poland"
+    },
+    {
+        id: 22,
+        title: "EPC for Thermal Remediation Units at Former Petrochemical Platform",
+        source: "Eni S.p.A.",
+        link: "https://news.google.com/search?q=Eni+thermal+remediation+EPC+tender+2026",
+        date: "2026-03-20",
+        category: "EPC Appointment",
+        sector: "Refinery & Petrochemical",
+        country: "Italy"
+    },
+    {
+        id: 23,
+        title: "Marine Engineering FEED for Yttre Stengrund Wind Turbine Removals",
+        source: "Vattenfall Procurement",
+        link: "https://news.google.com/search?q=Yttre+Stengrund+turbine+removal+FEED+tender+2026",
+        date: "2026-03-22",
+        category: "FEED Study",
+        sector: "Wind",
+        country: "Sweden"
+    },
+    {
+        id: 24,
+        title: "RFP for Environmental Remediation of Taranto Steelworks Site",
+        source: "Italian Ministry of Environment",
+        link: "https://news.google.com/search?q=Taranto+steelworks+remediation+RFP+2026",
+        date: "2026-03-25",
+        category: "Environmental Assessment",
+        sector: "Other Industrial",
+        country: "Italy"
+    },
+    {
+        id: 25,
+        title: "Audit of North Sea Pipelines for Future Decommissioning Liability",
+        source: "NSTA Energy Pathfinder",
+        link: "https://news.google.com/search?q=NSTA+pipeline+decommissioning+audit+tender+2026",
+        date: "2026-04-01",
+        category: "Environmental Assessment",
+        sector: "Oil & Gas",
+        country: "UK"
+    },
+    {
+        id: 26,
+        title: "Oil & fuel infrastructure demolition at RNAS Yeovilton (legacy asset removal)",
+        source: "Oil & Pipelines Agency",
+        link: "https://opa.delta-esourcing.com/commonNoticeSearch/viewNotice.html?displayNoticeId=1023831627",
+        date: "2026-04-02",
+        category: "Demolition Scope",
+        sector: "Refinery & Petrochemical",
+        country: "UK"
+    },
+    {
+        id: 27,
+        title: "FEED Study for North Sea Legacy Platform Decommissioning",
+        source: "Equinor Procurement",
+        link: "https://news.google.com/search?q=Equinor+FEED+study+decommissioning+tender+2026",
+        date: "2026-04-10",
+        category: "FEED Study",
+        sector: "Oil & Gas",
+        country: "Norway"
     }
 ];
+
