@@ -1190,11 +1190,12 @@ const mockData = [
         name: "ILVA/Acciaierie d'Italia Taranto Coke Ovens",
         sector: "Other Industrial",
         country: "Italy",
-        year: 2028,
+        year: 2030,
         value: 400,
         tenderStatus: "Not yet awarded",
         selectionDrivers: [
             "Italian government placed ILVA Taranto under extraordinary administration in 2024",
+            "Over the next four years to 2030, the Taranto plant would operate with two blast furnaces while one electric arc furnace (EAF) is constructed. From 2030 onwards, the blast furnaces would be shut down and dismantled",
             "Coke oven batteries identified as primary pollution source — closure mandated by courts",
             "European Court of Human Rights ruling (2019) cited environmental and health violations",
             "Transition to DRI/EAF steelmaking planned but financing remains uncertain"
@@ -1376,6 +1377,115 @@ const mockData = [
             { label: "Polish GIOŚ", url: "https://www.gios.gov.pl/" }
         ],
         readinessFactors: { endOfLife: 2, regulatoryPressure: 3, operatorIntent: 2, environmentalRisk: 2, tenderOpenness: 5 }
+    },
+
+    // --- USER-SOURCED ADDITIONS (April 2026) ---
+
+    {
+        id: 63,
+        name: "ArcelorMittal Dunkirk Blast Furnace (Legacy Units)",
+        sector: "Other Industrial",
+        country: "France",
+        year: 2030,
+        value: 320,
+        tenderStatus: "Not yet awarded",
+        selectionDrivers: [
+            "ArcelorMittal confirmed €1.3B investment for new 2Mt EAF at Dunkirk, scheduled to commence 2029",
+            "One existing blast furnace to be retired around 2030 as EAF replaces BF-BOF steelmaking route",
+            "French government co-funding green steel transition under industrial decarbonization programme",
+            "Legacy blast furnace infrastructure and associated coke plant will require demolition and site remediation"
+        ],
+        valueBasis: "Estimated from ArcelorMittal's European decarbonization capex disclosures and French ADEME remediation cost benchmarks for integrated steelworks.",
+        sources: [
+            { label: "ArcelorMittal – Dunkirk Investment", url: "https://corporate.arcelormittal.com/" },
+            { label: "ESG Today – ArcelorMittal Dunkirk EAF", url: "https://www.esgtoday.com/" }
+        ],
+        readinessFactors: { endOfLife: 3, regulatoryPressure: 4, operatorIntent: 4, environmentalRisk: 4, tenderOpenness: 5 }
+    },
+    {
+        id: 64,
+        name: "ArcelorMittal Bremen Blast Furnace & Coke Assets",
+        sector: "Other Industrial",
+        country: "Germany",
+        year: 2032,
+        value: 280,
+        tenderStatus: "Not yet awarded",
+        selectionDrivers: [
+            "ArcelorMittal cancelled €1.3B green steel transformation at Bremen in June 2025 citing weak economics",
+            "Existing blast furnace and coke oven infrastructure is ageing — ongoing maintenance costs escalating",
+            "German government and EU IPCEI subsidy framework remains available if project is relaunched",
+            "Ageing assets face increasing regulatory pressure from German UBA emission standards"
+        ],
+        valueBasis: "Estimated from ArcelorMittal's European restructuring provisions and German UBA/LANUV environmental remediation cost assessments for integrated steelworks.",
+        sources: [
+            { label: "Clean Energy Wire – ArcelorMittal Bremen", url: "https://www.cleanenergywire.org/" },
+            { label: "Eurometal – Bremen Green Steel", url: "https://eurometal.net/" }
+        ],
+        readinessFactors: { endOfLife: 3, regulatoryPressure: 3, operatorIntent: 2, environmentalRisk: 4, tenderOpenness: 5 }
+    },
+    {
+        id: 65,
+        name: "Salzgitter AG Coke Ovens (SALCOS Transition)",
+        sector: "Other Industrial",
+        country: "Germany",
+        year: 2033,
+        value: 250,
+        tenderStatus: "Not yet awarded",
+        selectionDrivers: [
+            "Salzgitter AG's SALCOS programme targets transition from blast furnace to DRI/EAF steelmaking",
+            "First DRI plant (with natural gas, transitioning to hydrogen) scheduled for commissioning 2025–2026",
+            "Phased retirement of coke ovens planned as DRI capacity ramps up through 2030s",
+            "Federal and Lower Saxony state government co-financing the €2.3B SALCOS transition"
+        ],
+        valueBasis: "Based on Salzgitter AG's SALCOS project disclosures and German UBA decommissioning cost benchmarks for coke oven facilities.",
+        sources: [
+            { label: "Salzgitter AG – SALCOS", url: "https://www.salzgitter-ag.com/en/sustainability/salcos.html" },
+            { label: "Clean Energy Wire – SALCOS", url: "https://www.cleanenergywire.org/" }
+        ],
+        readinessFactors: { endOfLife: 3, regulatoryPressure: 3, operatorIntent: 4, environmentalRisk: 3, tenderOpenness: 5 }
+    },
+    {
+        id: 66,
+        name: "Forties Pipeline System (INEOS FPS)",
+        sector: "Oil & Gas",
+        country: "UK",
+        year: 2033,
+        value: 500,
+        tenderStatus: "Not yet awarded",
+        selectionDrivers: [
+            "INEOS executives warn FPS could reach end-of-life between 2030–2035 due to UK tax policy and declining volumes",
+            "Pipeline designated as Critical National Infrastructure — carries ~20-30% of UK offshore oil production",
+            "Throughput declining as connected North Sea fields mature — economic viability under pressure",
+            "INEOS invested £500M+ in maintenance since 2017, but Energy Profits Levy threatens further investment"
+        ],
+        valueBasis: "Estimated from INEOS FPS operational disclosures, NSTA decommissioning cost guidance for major pipeline infrastructure, and comparable North Sea pipeline retirement costs.",
+        sources: [
+            { label: "INEOS – Forties Pipeline System", url: "https://www.ineos.com/businesses/ineos-fps/" },
+            { label: "Pipeline Journal – FPS Future", url: "https://www.pipeline-journal.net/" },
+            { label: "Offshore Technology – FPS End of Life", url: "https://www.offshore-technology.com/" }
+        ],
+        readinessFactors: { endOfLife: 3, regulatoryPressure: 3, operatorIntent: 2, environmentalRisk: 3, tenderOpenness: 5 }
+    },
+    {
+        id: 67,
+        name: "Chantiers de l'Atlantique – Legacy Yard Assets (Saint-Nazaire)",
+        sector: "Shipping & Marine",
+        country: "France",
+        year: 2032,
+        value: 110,
+        tenderStatus: "Not yet awarded",
+        selectionDrivers: [
+            "Saint-Nazaire shipyard undergoing modernization — oldest yard buildings and infrastructure from 1960s era",
+            "Chantiers de l'Atlantique investing in new construction halls for next-generation cruise ship capacity",
+            "Legacy dry dock infrastructure and outdated outfitting facilities to be decommissioned as part of site renewal",
+            "French government (through BPCE/Fincantieri partnership) supporting facility modernization programme"
+        ],
+        valueBasis: "Estimated from Chantiers de l'Atlantique capital investment disclosures and French maritime infrastructure renewal cost benchmarks.",
+        sources: [
+            { label: "Chantiers de l'Atlantique", url: "https://www.chantiers-atlantique.com/" },
+            { label: "French Ministry of Economy", url: "https://www.economie.gouv.fr/" }
+        ],
+        readinessFactors: { endOfLife: 3, regulatoryPressure: 2, operatorIntent: 3, environmentalRisk: 2, tenderOpenness: 5 }
     }
 ];
 
@@ -1403,7 +1513,7 @@ const scanLogs = [
     "[AI-LOGIC] Computing Readiness Score: endOfLife × 0.20 + regulatoryPressure × 0.20 + operatorIntent × 0.25 + environmentalRisk × 0.15 + tenderOpenness × 0.20",
     "[AI-LOGIC] Validating against public sources — removing unverifiable entries...",
     "[CALCULATING] Estimating remediation values from annual reports and regulatory benchmarks...",
-    "[SUCCESS] Yield: 61 verified opportunities identified across 8 sectors. Rendering dashboard."
+    "[SUCCESS] Yield: 60 verified opportunities identified across 8 sectors. Rendering dashboard."
 ];
 
 

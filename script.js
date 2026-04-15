@@ -35,9 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Filter out nuclear assets globally
-    // IDs of assets already fully decommissioned (verified April 2026)
+    // IDs of assets already fully decommissioned or removed per user verification (April 2026)
     const EXCLUDED_IDS = new Set([
+        2,   // Ninian Northern Platform — already decommissioned
+        7,   // Thistle Alpha Platform — already decommissioned
+        8,   // Dunlin Alpha Platform — already decommissioned
+        15,  // Shell Wesseling Refinery (Rheinland South) — already decommissioned
         25,  // Runcorn Chlorine Mercury Cell Plant — fully decommissioned in 2016
+        40,  // Drax Units 5 & 6 (Remaining Coal) — already decommissioned
+        51,  // ArcelorMittal Florange Blast Furnaces — already decommissioned
     ]);
 
     const filteredMockData = mockData.filter(d => {
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = d.name.toLowerCase();
         const sector = d.sector.toLowerCase();
         return !name.includes('nuclear') && !name.includes('magnox') && !name.includes('wylfa') && !sector.includes('nuclear');
-    });
+    }).sort((a, b) => a.year - b.year); // Sort by year: earliest first
 
     // ===================================================
     // 1. SIMULATION LOGIC
@@ -106,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (countryFilter !== 'all') data = data.filter(d => d.country === countryFilter);
         if (sectorFilter !== 'all') data = data.filter(d => d.sector === sectorFilter);
 
-        data.sort((a, b) => computeReadinessScore(b) - computeReadinessScore(a));
+        data.sort((a, b) => a.year - b.year); // Sort by year: earliest first
 
         updateKPIs(data);
         renderCharts(data);
