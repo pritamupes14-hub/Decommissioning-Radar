@@ -1885,56 +1885,6 @@ const mockTenders = [
     },
     {
         id: 21,
-        title: "Tender for Soil Decontamination and Land Preparation — Gdynia Docklands",
-        source: "Polish Port Authority",
-        link: "https://news.google.com/search?q=Gdynia+dockland+remediation+tender+2026",
-        date: "2026-03-15",
-        category: "Environmental Assessment",
-        sector: "Shipping & Marine",
-        country: "Poland"
-    },
-    {
-        id: 22,
-        title: "EPC for Thermal Remediation Units at Former Petrochemical Platform",
-        source: "Eni S.p.A.",
-        link: "https://news.google.com/search?q=Eni+thermal+remediation+EPC+tender+2026",
-        date: "2026-03-20",
-        category: "EPC Appointment",
-        sector: "Refinery & Petrochemical",
-        country: "Italy"
-    },
-    {
-        id: 23,
-        title: "Marine Engineering FEED for Yttre Stengrund Wind Turbine Removals",
-        source: "Vattenfall Procurement",
-        link: "https://news.google.com/search?q=Yttre+Stengrund+turbine+removal+FEED+tender+2026",
-        date: "2026-03-22",
-        category: "FEED Study",
-        sector: "Wind",
-        country: "Sweden"
-    },
-    {
-        id: 24,
-        title: "RFP for Environmental Remediation of Taranto Steelworks Site",
-        source: "Italian Ministry of Environment",
-        link: "https://news.google.com/search?q=Taranto+steelworks+remediation+RFP+2026",
-        date: "2026-03-25",
-        category: "Environmental Assessment",
-        sector: "Other Industrial",
-        country: "Italy"
-    },
-    {
-        id: 25,
-        title: "Audit of North Sea Pipelines for Future Decommissioning Liability",
-        source: "NSTA Energy Pathfinder",
-        link: "https://news.google.com/search?q=NSTA+pipeline+decommissioning+audit+tender+2026",
-        date: "2026-04-01",
-        category: "Environmental Assessment",
-        sector: "Oil & Gas",
-        country: "UK"
-    },
-    {
-        id: 26,
         title: "Oil & fuel infrastructure demolition at RNAS Yeovilton (legacy asset removal)",
         source: "Oil & Pipelines Agency",
         link: "https://opa.delta-esourcing.com/commonNoticeSearch/viewNotice.html?displayNoticeId=1023831627",
@@ -1942,16 +1892,6 @@ const mockTenders = [
         category: "Demolition Scope",
         sector: "Refinery & Petrochemical",
         country: "UK"
-    },
-    {
-        id: 27,
-        title: "FEED Study for North Sea Legacy Platform Decommissioning",
-        source: "Equinor Procurement",
-        link: "https://news.google.com/search?q=Equinor+FEED+study+decommissioning+tender+2026",
-        date: "2026-04-10",
-        category: "FEED Study",
-        sector: "Oil & Gas",
-        country: "Norway"
     }
 ];
 
