@@ -1399,10 +1399,11 @@ const scanLogs = [
     "[AI-LOGIC] Cross-referencing operator annual reports for asset retirement provisions...",
     "[AI-LOGIC] Excluding all nuclear sector assets per scope definition...",
     "[AI-LOGIC] Filtering assets where decommissioning tender already awarded...",
+    "[AI-LOGIC] Removing assets already decommissioned or under active demolition contract...",
     "[AI-LOGIC] Computing Readiness Score: endOfLife × 0.20 + regulatoryPressure × 0.20 + operatorIntent × 0.25 + environmentalRisk × 0.15 + tenderOpenness × 0.20",
     "[AI-LOGIC] Validating against public sources — removing unverifiable entries...",
     "[CALCULATING] Estimating remediation values from annual reports and regulatory benchmarks...",
-    "[SUCCESS] Yield: 62 evidence-backed targets identified across 8 sectors. Rendering dashboard."
+    "[SUCCESS] Yield: 56 verified opportunities identified across 8 sectors. Rendering dashboard."
 ];
 
 

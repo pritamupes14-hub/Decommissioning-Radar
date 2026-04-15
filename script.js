@@ -35,7 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Filter out nuclear assets globally
+    // IDs of assets already decommissioned / demolished / contract awarded (verified April 2026)
+    const EXCLUDED_IDS = new Set([
+        9,   // Grangemouth Refinery — ceased operations Apr 2025, converted to fuel terminal
+        11,  // Mossmorran Ethylene Plant (FEP) — permanently shut Feb 2026, decom underway in-house
+        13,  // SABIC Olefins 6 (Wilton, Teesside) — permanently closed, divested to AEQUITA Jan 2026
+        17,  // Prax Lindsey Oil Refinery — acquired by Phillips 66 Jan 2026, being integrated
+        25,  // Runcorn Chlorine Mercury Cell Plant — fully decommissioned in 2016
+        29,  // Lely Offshore Wind Farm — fully removed in 2016
+    ]);
+
     const filteredMockData = mockData.filter(d => {
+        if (EXCLUDED_IDS.has(d.id)) return false;
         const name = d.name.toLowerCase();
         const sector = d.sector.toLowerCase();
         return !name.includes('nuclear') && !name.includes('magnox') && !name.includes('wylfa') && !sector.includes('nuclear');
