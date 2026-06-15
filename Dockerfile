@@ -6,7 +6,6 @@ COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
 COPY mockData.js /usr/share/nginx/html/
-COPY newMockTenders.js /usr/share/nginx/html/
 
 # Expose port 8080 (Cloud Run expects the container to listen on $PORT, typically 8080)
 EXPOSE 8080
